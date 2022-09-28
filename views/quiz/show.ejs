@@ -8,12 +8,33 @@
 </head>
 <body>
     <h1><%= question.number %>.) <%= question.question %></h1>
-    <h2><%= question.correctAns %> </h2>
-    <h2><%= question.wrongAns1 %> </h2>
-    <h2><%= question.wrongAns2 %> </h2>
-    <h2><%= question.wrongAns3 %> </h2>
+    <ul>
+        <li>
+            Correct Answer:<strong><%= question.correctAns %></strong>
+        </li>  
+
+        <li>
+            Wrong Answer #1:<strong><%= question.wrongAns1 %></strong>
+        </li>
+
+        <li>
+            Wrong Answer #2:<strong><%= question.wrongAns2 %></strong>
+        </li>
+
+        <li>
+            Wrong Answer #3:<strong><%= question.wrongAns3 %></strong>
+        </li>
+    </ul>
+    
+    
+   
+    
 
     <a href="/quiz/<%= question._id %>/edit">Edit this Question</a>
+
+    <form action="/quiz/<%= question._id %>?_method=DELETE" method="POST">
+        <button>Delete</button>
+    </form>
 
     <ul>
         <li>

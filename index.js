@@ -68,6 +68,12 @@ app.put('/quiz/:id', async (req, res) => {
     res.redirect(`/quiz/${question._id}`);
 })
 
+app.delete('/quiz/:id', async (req, res) => {
+    const { id } = req.params;
+    await Question.findByIdAndDelete(id);
+    res.redirect('/quiz/list');
+})
+
 // app.get('/newquestion', async (req, res) => {
 //     const question = new Question({ number: 1, question: 'Is this the first question?', correctAns: 'Yes', wrongAns1: 'No', wrongAns2: 'Maybe', wrongAns3: 'I dunno' })
 //     await question.save();
