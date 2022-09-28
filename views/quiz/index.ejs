@@ -8,16 +8,31 @@
 </head>
 <body>
     <h1>Quiz</h1>
+    <h3>Score: </h3>
 
     <ul>
-        <% let currentQuestionNum = 1 %>
+        
         <% for (let question of questions) {%>
             <li>
-                    <%= question.number %>.) <%= question.question %>
-                    <button><%= question.correctAns %></button>
-                    <button><%= question.wrongAns1 %></button>
-                    <button><%= question.wrongAns2 %></button>
-                    <button><%= question.wrongAns3 %></button>
+                <%= question.number %>.) <%= question.question %>
+                
+                <form>
+                    <button>
+                        <%= question.correctAns %>
+                    </button>
+
+                    <button>
+                        <%= question.wrongAns1 %>
+                    </button>
+
+                    <button>
+                        <%= question.wrongAns2 %>
+                    </button>
+
+                    <button>
+                        <%= question.wrongAns3 %>
+                    </button>
+                </form>
             </li>
             <% } %>
     </ul>
