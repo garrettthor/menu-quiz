@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Question</title>
+</head>
+<body>
+    <h1>New Question:</h1>
+
+    <form action="/quiz" method="POST">
+        <div>
+            <label for="question">Question</label>
+            <input type="text" id="question" name="question[question]">
+        </div>
+
+        <div>
+            <label for="number">Number</label>
+            <input type="number" id="number" name="question[number]">
+        </div>
+
+        <div>
+            <label for="correctAns">Correct Answer</label>
+            <input type="text" id="correctAns" name="question[correctAns]">
+        </div>
+
+        <div>
+            <label for="wrongAns1">Wrong Answer #1</label>
+            <input type="text" id="wrongAns1" name="question[wrongAns1]">
+        </div>
+        <div>
+            <label for="wrongAns2">Wrong Answer #2</label>
+            <input type="text" id="wrongAns1" name="question[wrongAns2]">
+        </div>
+        <div>
+            <label for="wrongAns3">Wrong Answer #3</label>
+            <input type="text" id="wrongAns1" name="question[wrongAns3]">
+        </div>
+
+        <button>Add question</button>
+    </form>
+
+    <a href="/quiz/adminIndex">Back to Admin Home</a>
+</body>
+</html>

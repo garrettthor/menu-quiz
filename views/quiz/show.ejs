@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Question</title>
+</head>
+<body>
+    <h1><%= question.number %>.) <%= question.question %></h1>
+    <h2><%= question.correctAns %> </h2>
+    <h2><%= question.wrongAns1 %> </h2>
+    <h2><%= question.wrongAns2 %> </h2>
+    <h2><%= question.wrongAns3 %> </h2>
+
+    <a href="/quiz/<%= question._id %>/edit">Edit this Question</a>
+
+    <ul>
+        <li>
+            <a href="/quiz/adminIndex">Back to Admin Home</a>
+        </li>
+        <li>
+            <a href="/quiz/list">Back to Question List</a>
+        </li>
+    </ul>
+</body>
+</html>

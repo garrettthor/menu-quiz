@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Questions</title>
+</head>
+
+<body>
+
+    <h1>Question List</h1>
+
+    <ul>
+        <% for (let question of questions) {%>
+            <li>
+                <a href="/quiz/<%= question._id %>"><%= question.number %>.) <%= question.question %></a>
+            </li>
+            <% } %>
+    </ul>
+
+    <a href="/quiz/adminIndex">Back to Admin Home</a>
+
+</body>
+
+</html>
